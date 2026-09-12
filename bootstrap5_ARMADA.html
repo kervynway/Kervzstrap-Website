@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="bootstrap5/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Sample Website with Bootstrap 5</title>
+</head>
+<body>
+
+<!-- NAV BAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#home">
+            <span class="brand-mark"><i class="bi bi-bootstrap"></i></span>
+            Kervztrap5 Website
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item ms-lg-2">
+                    <button id="themeToggle" class="btn btn-outline-light btn-sm" type="button" aria-label="Toggle theme">
+                        <i class="bi bi-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<header id="home" class="hero text-center">
+    <div class="container">
+        <span class="hero-badge">Version 6.7</span>
+        <h1>Build fast, responsive sites with Bootstrap</h1>
+        <p>
+            Powerful, extensible, and feature-packed frontend toolkit. Build and customize
+            with Sass, utilize prebuilt grid system and components, and bring projects to
+            life with powerful JavaScript plugins.
+        </p>
+        <div class="hero-actions">
+            <a href="#pricing" class="btn btn-primary btn-lg">Get Started</a>
+            <a href="https://github.com/twbs/bootstrap/releases/download/v5.3.8/bootstrap-5.3.8-dist.zip" class="btn btn-outline-light btn-lg" target="_blank" rel="noreferrer">Download Bootstrap 5.3.8</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section id="features">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Designed to give you full control over your layout and functionality.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-moon-stars"></i></div>
+                        <h3>Dark Mode Ready</h3>
+                        <p class="text-secondary mb-0">Built-in theme switcher using Bootstrap 5's native data-bs-theme attribute.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-phone"></i></div>
+                        <h3>100% Mobile First</h3>
+                        <p class="text-secondary mb-0">Fully fluid layout engineered to scale down seamlessly to mobile screens.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="bi bi-sliders"></i></div>
+                        <h3>Interactive UI</h3>
+                        <p class="text-secondary mb-0">Includes dynamic feedback toasts, sliders, and form validation logic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Flexible Pricing</h2>
+                <p class="section-subtitle">Choose the plan that fits your business needs.</p>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-4">
+                    <div class="price-card">
+                        <h3>Starter</h3>
+                        <div class="amount">₱0.00 <span>/mo</span></div>
+                        <ul>
+                            <li><i class="bi bi-check-circle-fill"></i> 1 Project</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Community Support</li>
+                            <li><i class="bi bi-x-circle-fill text-danger"></i> Custom Domain</li>
+                        </ul>
+                        <button class="btn btn-outline-primary w-100">Sign Up Free</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="price-card featured">
+                        <span class="popular-badge">Most Popular</span>
+                        <h3>Pro Developer</h3>
+                        <div class="amount">₱49.00 <span>/mo</span></div>
+                        <ul>
+                            <li><i class="bi bi-check-circle-fill"></i> Unlimited Projects</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Priority Support</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Custom Domain</li>
+                        </ul>
+                        <button class="btn btn-primary w-100">Get Started Pro</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="price-card">
+                        <h3>Enterprise</h3>
+                        <div class="amount">₱109.00 <span>/mo</span></div>
+                        <ul>
+                            <li><i class="bi bi-check-circle-fill"></i> Dedicated Server</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 24/7 Phone Support</li>
+                            <li><i class="bi bi-check-circle-fill"></i> SLA Guarantee</li>
+                        </ul>
+                        <button class="btn btn-outline-primary w-100">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">What People Say</h2>
+            </div>
+
+            <div class="testimonial-carousel">
+                <div class="testimonial-viewport">
+                    <div class="testimonial-track">
+                        <div class="testimonial-slide">
+                            <div class="testimonial-box">
+                                <div class="testimonial-text">"Highly recommended po!"</div>
+                                <div class="testimonial-person">
+                                    <strong>Kervyn Way, BSIT-Business Analytics Track</strong>
+                                    Lead Developer, E-Hub Inventory Management System
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide">
+                            <div class="testimonial-box">
+                                <div class="testimonial-text">"Awesome! The dark mode toggle integration works like a charm. Extremely clean markup!"</div>
+                                <div class="testimonial-person">
+                                    <strong>Aiah Arceta, BSIT-Business Analytics Track</strong>
+                                    BSIT Student, Batangas State University
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide">
+                            <div class="testimonial-box">
+                                <div class="testimonial-text">"I love how quick and polished the design feels on both desktop and mobile. It saved our team hours of work."</div>
+                                <div class="testimonial-person">
+                                    <strong>Joe Mama, BSIT-Software Development Track</strong>
+                                    BSIT Student, Batangas State University
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-controls">
+                    <button type="button" class="testimonial-control" aria-label="Previous testimonial" id="testimonialPrev">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button type="button" class="testimonial-control" aria-label="Next testimonial" id="testimonialNext">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-light">
+        <div class="container">
+            <div class="text-center">
+                <div class="section-label">Contact</div>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Fill out the form below to send us a live message.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-wrap">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                                </div>
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-12 text-center mt-3">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5">
+                                        Submit Form <i class="bi bi-send ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        </div>
+        <div class="footer-copy">© 2026 Kervz. Built with Bootstrap 5.3.</div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+
+    function setTheme(theme) {
+        root.setAttribute('data-bs-theme', theme);
+        const icon = themeToggle.querySelector('i');
+        icon.className = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const nextTheme = root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
+        setTheme(nextTheme);
+        localStorage.setItem('theme', nextTheme);
+    });
+
+    const slides = Array.from(document.querySelectorAll('.testimonial-slide'));
+    const track = document.querySelector('.testimonial-track');
+    const prevBtn = document.getElementById('testimonialPrev');
+    const nextBtn = document.getElementById('testimonialNext');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        currentSlide = (index + slides.length) % slides.length;
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+    nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+    setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 5000);
+
+    document.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        Swal.fire({
+            title: 'Message Sent!',
+            text: 'Your message has been successfully submitted.',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+        e.target.reset();
+    });
+</script>
+</body>
+</html>
